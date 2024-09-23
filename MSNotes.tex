@@ -18,6 +18,8 @@
 }
 \def\b{\boldsymbol}
 \def\d{\mathrm{d}}
+\def\p{\partial}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 \theoremstyle{definition}
 \newtheorem{definition}{定义}[chapter]
 \newtheorem{theorem}{定理}[chapter]
@@ -27,4 +29,6 @@
     \maketitle
     \include{copyright.tex}
     \tableofcontents
+    \include{充分统计量}
+    \include{Fisher信息矩阵}
 \end{document}

@@ -1,0 +1,27 @@
+\chapter{充分统计量}
+
+\section{定义}
+
+设一随机变量 $X(\omega;\vec{\theta})$, 其分布函数为 $F(x;\vec{\theta})$. 取 $X$ 的样本 $\vec{X}$, 其分布函数为 $F(\vec{x};\vec{\theta})$. 设一函数 $T(\vec{x})$ 诱导出一统计量 $T(\vec{X};\vec{\theta})$, 其分布函数为 $F(t;\vec{\theta})$. 若 $F(\vec{x};\vec{\theta}|T=t)$ 与 $\theta$ 无关, 则称 $T$ 是 $\theta$ 的一个充分统计量.
+
+若 $P(\{(\omega_1,\dots,\omega_n)|{X_1}(\omega_1;\theta)\in B_1,\dots,{X_n}(\omega_n;\theta)\in B_n\}$\\$|\{(\omega_1,\dots,\omega_n)|T(X_1(\omega_1;\theta),\dots,X_n(\omega_n;\theta))=t\}$ 与 $\theta$ 无关, 则称 $T$ 是 $\theta$ 的一个充分统计量. 
+
+\section{定理}
+
+因子分解定理: 若样本概率密度为 $p_{X;\theta}(x_1,\dots,x_n)$, 则 $T$ 是 $\theta$ 的充分统计量, 当且仅当 $p_{X;\theta}(x_1,\dots,x_n)=g_{\theta}(T(x_1,\dots,x_n))h(x_1,\dots,x_n)$, $h(x_1,\dots,x_n)\ge0$.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}[c]{|c|c|c|c|c|}
+        \hline
+        分布 & $p_{\theta}(\vec{x})$ & $T(\vec{x})$ & $h(\vec{x})$ & $g_{\theta}(t)$ \\
+        \hline
+        U($a$,$b$) & $\frac{\mathrm{I}_{\{a\le x_{(1)}\le x_{(n)}\le b\}}(\vec{x})}{(b-a)^{n}}$ & $t_1=x_{(1)},t_2=x_{(n)}$ & $1$ & $\frac{\mathrm{I}_{\{a\le t_1\le t_2\le b\}}(\vec{x})}{(b-a)^{n}}$ \\
+        \hline
+        P($\lambda$) & $\frac{e^{-n\lambda}\lambda^{\sum_{i=1}^{n}x_i}}{\prod_{i=1}^nx_i!}$ & $t=\sum_{i=1}^{n}x_i$ & $\frac{1}{\prod_{i=1}^nx_i!}$ & $e^{-n\lambda}\lambda^t$ \\
+        \hline
+        N($\mu$,$\sigma^2$) & \tabincell{c}{$\frac{\exp\left\{-\frac{(n-1)s^2+n(\bar{x}-\mu)^2}{2\sigma^2}\right\}}{(2\pi \sigma^2)^{n/2}}$\\$\bar{x}=\frac{\sum_{i=1}^nx_i}{n},s^2=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}$} & $t_1=\bar{x},t_2=s^2$ & $1$ & $\frac{\exp\left\{-\frac{(n-1)t_2+n(t_1-\mu)^2}{2\sigma^2}\right\}}{(2\pi \sigma^2)^{n/2}}$\\
+        \hline
+    \end{tabular}
+    \caption{因子分解 $p_{\theta}(\vec{x})=g_{\theta}(T(\vec{x}))h(\vec{x}))$ 示例}
+\end{table}
