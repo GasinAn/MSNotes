@@ -1,0 +1,15 @@
+\chapter{假设检验}
+
+\section{定义}
+
+若事件 $W$ 发生时拒绝 $H_0$, 则称 $W$ 为 $H_0$ 的拒绝域, 补集 $-W$ 为 $H_0$ 的接受域 (不拒绝域).
+
+若 $H_0\rightarrow P(W)\le\alpha$ 成立, 则称 $P(W|;H_0)\le\alpha$ 总成立.
+
+若 $P(\text{犯第I类拒真错误})=P(W|;H_0)\le\alpha$ 总成立, 则称检验为显著性水平为 $\theta$ 的检验. 参数检验, 设 $H_0:\theta\in\Theta_0$, 检验统计量由 $T(\vec{x})$ 诱导出, $W=T\in W_T$ 若 $P(\text{犯第I类拒真错误})=P(T\in W_T|;\theta\in\Theta_0)\le\alpha$ 总成立, 则称检验为显著性水平为 $\alpha$ 的检验.
+
+称 $p=\min\{\alpha|P(\text{犯第I类拒真错误})=P(W|;H_0)\le\alpha\}$ 为拒绝 $H_0$ 的 $p$ 值 (最小显著性水平).
+
+\section{广义似然比检验}
+
+称 $\lambda(\vec{X})=\max_{\theta\in\Theta_0}L(\theta;\vec{X})/\max_{\theta\in\Theta}L(\theta;\vec{X})$ 为广义似然比统计量. 称由 $W={\lambda(\vec{X})\le c}$, $P(W|;H_0)=\alpha$ 确定的检验为临界值为 $c$ 的显著性水平为 $\alpha$ 的广义似然比检验

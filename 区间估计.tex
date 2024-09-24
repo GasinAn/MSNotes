@@ -1,0 +1,25 @@
+\chapter{区间估计}
+
+\section{置信区间}
+
+设一随机变量 $X(\omega;\theta)$, 其分布函数为 $F(x;\theta)$. 取 $X$ 的样本 $\vec{X}$, 其分布函数为 $F(\vec{x};\theta)$. 设两函数 $\hat{\theta}_\text{L}(\vec{x})$, $\hat{\theta}_\text{U}(\vec{x})$ 诱导出两统计量 $\hat{\theta}_\text{L}(\omega;\theta)$, $\hat{\theta}_\text{U}(\omega;\theta)$, 则 $P(\hat{\theta}_\text{L}\le\theta\wedge\hat{\theta}_\text{U}\ge\theta)$ 称为置信度, $\inf_{\theta\in\{\theta\}}P(\hat{\theta}_\text{L}\le\theta\wedge\hat{\theta}_\text{U}\ge\theta)$ 称为置信系数.
+
+若置信度 与 $\theta$ 无关, 则置信系数等于置信度.
+
+若任意 $\theta\in\{\theta\}$, 置信度 $\ge1-\alpha$, 则称 $[\hat{\theta}_\text{L},\hat{\theta}_\text{U}]$ 为 $\theta$ 的置信水平为 $1-\alpha$ 的置信区间. 若任意 $\theta\in\{\theta\}$, 置信度 $=1-\alpha$, 则称 $[\hat{\theta}_\text{L},\hat{\theta}_\text{U}]$ 为 $\theta$ 的 $1-\alpha$ 同等置信区间.
+
+设一随机变量 $X(\omega;\vec{\theta})$, 其分布函数为 $F(x;\vec{\theta})$. 取 $X$ 的样本 $\vec{X}$, 其分布函数为 $F(\vec{x};\vec{\theta})$. 设 $R(\vec{x})\in\{\vec{\theta}\}$, 则 $P(R(\vec{x})\ni \vec{\theta})$ 称为置信度, $\inf_{\vec{\theta}\in\{\vec{\theta}\}}P(R(\vec{x})\ni \vec{\theta})$ 称为置信系数.
+
+若任意 $\vec{\theta}\in\{\vec{\theta}\}$, 置信度 $\ge1-\alpha$, 则称 $R$ 为 $\theta$ 的置信水平为 $1-\alpha$ 的置信域. 若任意 $\theta\in\{\theta\}$, 置信度 $=1-\alpha$, 则称 $R$ 为 $\theta$ 的 $1-\alpha$ 同等置信域.
+
+\section{Bayesian 可信区间}
+
+若存在 $\hat{\theta}_\text{L}(\vec{x})$, $\hat{\theta}_\text{U}(\vec{x})$, 使得 $\int_{\hat{\theta}_\text{L}(\vec{x})}^{\hat{\theta}_\text{U}(\vec{x})}\pi(\theta|\vec{x})\ge1-\alpha$, 则称 $[\hat{\theta}_\text{L},\hat{\theta}_\text{U}]$ 为 $\theta$ 的可信水平为 $1-\alpha$ 的 Bayesian 可信区间.
+
+警告: Bayesian 可信区间不是置信区间. 因为置信区间的寻求需要枢轴量法等方法, 所以 Bayesian 可信区间的寻求比置信区间的寻求容易得多.
+
+若存在 $C\in\{\theta\}$, 使得 $\int_{C}\pi(\theta|\vec{x})=1-\alpha$, 且任意 $\theta_1\in C$, $\theta_2\notin C$, $\pi(\theta_1|\vec{x})\ge\pi(\theta_2|\vec{x})$, 则称 $C$ 为 $\theta$ 的可信水平为 $1-\alpha$ 的 Bayesian HPD 可信集. 作法: 在 $\theta-p$图中, 划一平行于 $\theta$ 轴的横线, 与 $p(\theta)$ 曲线的交点向下划垂直于 $\theta$ 轴的竖线, 获得可信集端点.
+
+若 Bayesian HPD 可信集不是区间, 许多统计学家建议不用 Bayesian HPD 可信集, 而用 $\alpha/2$ 和 $1-\alpha/2$ 分位数获得等尾可信区间.
+
+Bayesian 后验多峰常是先验信息和样本信息抵触.
