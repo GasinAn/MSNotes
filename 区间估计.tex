@@ -1,5 +1,7 @@
 \chapter{区间估计}
 
+思想: 设 $\theta$ 为一感兴趣的未知量, 构造随机置信域 $R(n)$, 使 $P(R(n)\ni \theta)\ge1-\alpha$ 且 $R$ 尽可能有 $R$ 最小等好性质.
+
 \section{置信区间}
 
 设一随机变量 $X(\omega;\theta)$, 其分布函数为 $F(x;\theta)$. 取 $X$ 的样本 $\vec{X}$, 其分布函数为 $F(\vec{x};\theta)$. 设两函数 $\hat{\theta}_\text{L}(\vec{x})$, $\hat{\theta}_\text{U}(\vec{x})$ 诱导出两统计量 $\hat{\theta}_\text{L}(\omega;\theta)$, $\hat{\theta}_\text{U}(\omega;\theta)$, 则 $P(\hat{\theta}_\text{L}\le\theta\wedge\hat{\theta}_\text{U}\ge\theta)$ 称为置信度, $\inf_{\theta\in\{\theta\}}P(\hat{\theta}_\text{L}\le\theta\wedge\hat{\theta}_\text{U}\ge\theta)$ 称为置信系数.

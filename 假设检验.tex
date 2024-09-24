@@ -1,10 +1,16 @@
 \chapter{假设检验}
 
+思想: 设 $H_0$ 为一假设, 构造随机事件 $W$, 使 $H_0$ 成立时 $P(W)\le\alpha$ 总成立, 若 $W$ 实际发生, 则拒绝 $H_0$, 否则接受 (不拒绝) $H_0$. 参数假设检验时, 设 $\theta$ 为一感兴趣的未知量, $\theta\in\Theta_0$ 为一假设, 构造随机统计量 $T(n)$ 和区域 $W_{T(n)}$, 使 $\theta\in\Theta_0$ 成立时 $P(T(n)\in W_{T(n)})\le\alpha$ 总成立, 若 $T(n)\in W_{T(n)}$ 实际发生, 则拒绝 $\theta\in\Theta_0$, 否则接受 (不拒绝) $\theta\in\Theta_0$.
+
+随机事件 $W$, 使 $H_0$ 成立时 $P(W)\le\alpha$, 若 $W$ 发生, 则拒绝 $H_0$, 否则接受 (不拒绝) $H_0$.
+
+$\theta$ 为一感兴趣的未知量, 构造随机置信域 $R(n)$, 使 $P(R(n)\ni \theta)\ge1-\alpha$
+
 \section{定义}
 
 若事件 $W$ 发生时拒绝 $H_0$, 则称 $W$ 为 $H_0$ 的拒绝域, 补集 $-W$ 为 $H_0$ 的接受域 (不拒绝域).
 
-若 $H_0\rightarrow P(W)\le\alpha$ 成立, 则称 $P(W|;H_0)\le\alpha$ 总成立.
+若 $H_0\Rightarrow P(W)\le\alpha$, 则称 $P(W|;H_0)\le\alpha$ 总成立.
 
 若 $P(\text{犯第I类拒真错误})=P(W|;H_0)\le\alpha$ 总成立, 则称检验为显著性水平为 $\theta$ 的检验. 参数检验, 设 $H_0:\theta\in\Theta_0$, 检验统计量由 $T(\vec{x})$ 诱导出, $W=T\in W_T$ 若 $P(\text{犯第I类拒真错误})=P(T\in W_T|;\theta\in\Theta_0)\le\alpha$ 总成立, 则称检验为显著性水平为 $\alpha$ 的检验.
 
